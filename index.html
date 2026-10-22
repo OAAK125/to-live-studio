@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>To Live Studio — Idea to Experience.</title>
+  <meta name="description" content="To Live Studio is an independent creative technology studio combining UI/UX design with AI-assisted front-end development and rapid prototyping.">
+  <meta property="og:title" content="To Live Studio">
+  <meta property="og:description" content="Design the idea. Build the experience.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400;1,9..144,600&family=Inter:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip" href="#work">Skip to content</a>
+
+  <header class="nav" id="top">
+    <a class="wordmark" href="#top" aria-label="To Live Studio, back to top">
+      <svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><circle cx="8" cy="11" r="7" fill="#D9654C"/><circle cx="14" cy="11" r="7" fill="#687044" fill-opacity=".85"/></svg>
+      <span>To Live <em>Studio</em></span>
+    </a>
+    <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="menu" aria-label="Open menu"><span></span><span></span></button>
+    <nav id="menu" class="nav__menu" aria-label="Primary">
+      <a href="#work">Work</a>
+      <a href="#services">Services</a>
+      <a href="#process">Process</a>
+      <a href="#studio">Studio</a>
+      <a class="btn btn--small" href="#contact">Start a project</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero grid-bg" aria-labelledby="hero-title">
+      <div class="hero__intro">
+        <p class="label">Independent creative technology studio</p>
+        <h1 id="hero-title">You have the idea. Let’s make it <em>live.</em></h1>
+        <p class="lede">To Live Studio combines thoughtful UI/UX design with AI-assisted development to turn website and app ideas into polished, interactive experiences.</p>
+        <div class="actions">
+          <a class="btn" href="#contact">Start a project</a>
+          <a class="btn btn--ghost" href="#work">Explore the work</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="work" class="work" aria-labelledby="work-title">
+      <div class="section-head">
+        <p class="label">Selected work</p>
+        <h2 id="work-title">Ideas made <em>live.</em></h2>
+        <p>A selection of digital projects, interfaces, and product experiences.</p>
+      </div>
+      <!-- Project panels are rendered from PROJECTS in js/script.js -->
+      <div id="projects" class="projects"></div>
+      <noscript><p class="note">Enable JavaScript to see the project panels.</p></noscript>
+    </section>
+
+    <section id="services" class="services" aria-labelledby="services-title">
+      <div class="section-head">
+        <p class="label">Services</p>
+        <h2 id="services-title">From first sketch to <em>working demo.</em></h2>
+      </div>
+      <article class="service service--a">
+        <span class="num">01</span>
+        <div><h3>UI/UX Design</h3>
+        <p>Thoughtful interfaces and user flows that help make a product idea clear, usable, and visually compelling.</p></div>
+        <ul><li>Wireframes</li><li>User flows</li><li>Interface design</li><li>Responsive screen designs</li><li>Clickable prototypes</li></ul>
+      </article>
+      <article class="service service--b">
+        <span class="num">02</span>
+        <div><h3>Interactive Prototyping</h3>
+        <p>Clickable experiences that help you communicate a concept, explore user journeys, and demonstrate a product before investing in full development.</p></div>
+        <ul><li>Linked screens</li><li>Simulated interactions</li><li>User journey demonstrations</li><li>Pitch-ready prototypes</li></ul>
+      </article>
+      <article class="service service--c">
+        <span class="num">03</span>
+        <div><h3>Coded Product Demos</h3>
+        <p>Responsive front-end experiences that turn approved designs into something people can see, click, and explore in a browser.</p></div>
+        <ul><li>HTML, CSS, and JavaScript where appropriate</li><li>React projects as separate engagements</li><li>Responsive layouts</li><li>Front-end interactions</li><li>Source-code handover</li></ul>
+      </article>
+      <p class="note">Prototypes and demos illustrate an idea. They are not production-ready software, and a basic demo does not include backends, payments, authentication, or databases.</p>
+    </section>
+
+    <section id="process" class="process" aria-labelledby="process-title">
+      <div class="section-head">
+        <p class="label">Process</p>
+        <h2 id="process-title">A clear path from idea to <em>experience.</em></h2>
+      </div>
+      <ol>
+        <li><span class="num">01</span><h3>Discover</h3><p>Understand the idea, target audience, goals, and required deliverables.</p></li>
+        <li><span class="num">02</span><h3>Design</h3><p>Define the user flow, wireframes, and visual direction.</p></li>
+        <li><span class="num">03</span><h3>Build</h3><p>Turn the approved design into an interactive prototype or coded front-end demo.</p></li>
+        <li><span class="num">04</span><h3>Handover</h3><p>Test the agreed functionality and provide the design files or source code.</p></li>
+      </ol>
+    </section>
+
+    <section id="studio" class="studio grid-bg" aria-labelledby="studio-title">
+      <div>
+        <p class="label">About the studio</p>
+        <h2 id="studio-title">Design thinking meets <em>hands-on building.</em></h2>
+      </div>
+      <div>
+        <p class="lede">To Live Studio brings together product design, user experience, and front-end development to help turn early-stage ideas into digital experiences people can see, explore, and interact with.</p>
+        <p>The approach is design-led: structure and visual direction come first, then AI-assisted development speeds up the move from approved screens to a working front end you can click through. It suits founders, small businesses, developers, and agencies who need a concept made visible.</p>
+      </div>
+    </section>
+
+    <section id="contact" class="contact" aria-labelledby="contact-title">
+      <div class="cta">
+        <h2 id="contact-title">Have an idea? Let’s make it <em>live.</em></h2>
+        <p>Share your idea and let’s work out the best way to turn it into a polished, interactive experience.</p>
+      </div>
+      <form id="contact-form" novalidate>
+        <p class="note note--status" role="note"><strong>Preview only.</strong> This form is not connected to a backend yet. Nothing you type is sent or stored.</p>
+        <div class="field"><label for="name">Name</label><input id="name" name="name" autocomplete="name" required><p class="error" id="name-error" aria-live="polite"></p></div>
+        <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required><p class="error" id="email-error" aria-live="polite"></p></div>
+        <div class="field"><label for="projectType">Project type</label>
+          <select id="projectType" name="projectType" required>
+            <option value="">Choose one</option><option>Website</option><option>Mobile app</option><option>Web application</option><option>Other</option>
+          </select><p class="error" id="projectType-error" aria-live="polite"></p></div>
+        <div class="field"><label for="deliverable">Preferred deliverable</label>
+          <select id="deliverable" name="deliverable" required>
+            <option value="">Choose one</option><option>UI/UX design</option><option>Interactive prototype</option><option>Coded front-end demo</option><option>Not sure yet</option>
+          </select><p class="error" id="deliverable-error" aria-live="polite"></p></div>
+        <div class="field field--wide"><label for="description">Project description</label><textarea id="description" name="description" rows="5" required minlength="20"></textarea><p class="error" id="description-error" aria-live="polite"></p></div>
+        <button class="btn" type="submit">Check my details</button>
+        <p class="form-status" id="form-status" role="status"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div>
+      <p class="wordmark"><span>To Live <em>Studio</em></span></p>
+      <p>An independent creative technology studio for UI/UX design, prototyping, and front-end demos.</p>
+    </div>
+    <nav aria-label="Footer"><h2 class="label">Explore</h2><a href="#work">Work</a><a href="#services">Services</a><a href="#process">Process</a><a href="#studio">Studio</a></nav>
+    <div><h2 class="label">Contact</h2><a class="btn btn--small" href="#contact">Start a project</a></div>
+    <p class="copy">© <span id="year">2026</span> To Live Studio</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
