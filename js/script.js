@@ -97,7 +97,13 @@
   /* ===== Contact form validation ===== */
   const RULES = {
     name: v => v.trim() ? '' : 'Please enter your name.',
-    email: v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()) ? '' : 'Please enter a valid email address.',
+    whatsapp: v => {
+      const value = v.trim();
+      const digits = value.replace(/\D/g, '').length;
+      return /^\+?[0-9\s().-]+$/.test(value) && digits >= 7 && digits <= 15
+        ? ''
+        : 'Please enter a valid WhatsApp phone number.';
+    },
     projectType: v => v ? '' : 'Please choose a project type.',
     deliverable: v => v ? '' : 'Please choose a preferred deliverable.',
     description: v => v.trim().length >= 20 ? '' : 'Please describe your idea in at least 20 characters.',

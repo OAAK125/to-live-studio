@@ -7,4 +7,4 @@ HTML5 + CSS3 + vanilla JS. No build step: open `index.html` or run `python3 -m h
 - Screenshots: project screenshots are stored in `assets/images/`, shown below the hero and on each project card.
 
 ## Contact form
-The contact form uses Netlify Forms (`data-netlify="true"`). Deploy the static site to Netlify to enable submissions; submissions can then be managed in the site's Netlify dashboard.
+The contact form uses Netlify Forms (`data-netlify="true"`) and collects a WhatsApp phone number instead of an email address. Deploy the static site to Netlify to enable submissions; submissions can then be managed in the site's Netlify dashboard. Direct WhatsApp links use the studio's WhatsApp contact link in `index.html`.

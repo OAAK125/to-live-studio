@@ -118,6 +118,8 @@ section, .footer { padding: clamp(4rem, 9vw, 8rem) var(--pad); }
 /* ===== Contact ===== */
 .contact { display: grid; grid-template-columns: 1fr 1.1fr; gap: clamp(2rem, 5vw, 4rem); background: var(--coral-text); color: var(--ivory); }
 .contact em { color: var(--butter); }
+.contact__whatsapp { margin-top: .25rem; border-color: var(--ivory); color: var(--ivory); }
+.contact__whatsapp:hover { color: var(--ivory); }
 form { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; background: var(--ivory); color: var(--charcoal); padding: clamp(1.25rem, 3vw, 2rem); border-radius: var(--radius); align-content: start; }
 .field--wide, form .btn { grid-column: 1 / -1; }
 label { display: block; font-size: .85rem; font-weight: 600; margin-bottom: .3rem; }
@@ -130,6 +132,11 @@ input[aria-invalid="true"], select[aria-invalid="true"], textarea[aria-invalid="
 .footer nav { display: flex; flex-direction: column; gap: .4rem; align-items: flex-start; } .footer a { text-decoration: none; } .footer a:hover { color: var(--coral-text); text-decoration: underline; }
 .footer .btn { color: var(--ivory); } .footer .btn:hover { text-decoration: none; }
 .copy { grid-column: 1 / -1; font-size: .85rem; color: var(--grey); margin: 0; }
+
+/* ===== Floating WhatsApp contact ===== */
+.whatsapp-float { position: fixed; right: max(1.25rem, env(safe-area-inset-right)); bottom: max(1.25rem, env(safe-area-inset-bottom)); z-index: 60; display: inline-flex; align-items: center; gap: .6rem; padding: .8rem 1.1rem; border-radius: 999px; background: #168C4A; color: #fff; text-decoration: none; font-size: .95rem; font-weight: 600; box-shadow: 0 4px 16px rgba(0,0,0,.22); transition: background .2s, transform .2s; }
+.whatsapp-float:hover { background: #106D39; transform: translateY(-2px); }
+.whatsapp-float svg { width: 1.4rem; height: 1.4rem; fill: currentColor; }
 
 /* ===== Reveal ===== */
 .js .reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s, transform .7s; }
@@ -150,6 +157,7 @@ input[aria-invalid="true"], select[aria-invalid="true"], textarea[aria-invalid="
   .nav__menu a:not(.btn) { padding: .9rem 0; border-bottom: var(--line); }
   .nav__menu .btn { margin-top: .9rem; }
   form { grid-template-columns: 1fr; }
+  .whatsapp-float { right: max(.75rem, env(safe-area-inset-right)); bottom: max(.75rem, env(safe-area-inset-bottom)); }
   .process ol { grid-template-columns: 1fr; } .footer { grid-template-columns: 1fr; }
 }
 @media (prefers-reduced-motion: reduce) {
