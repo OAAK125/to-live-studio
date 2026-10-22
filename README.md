@@ -6,5 +6,5 @@ HTML5 + CSS3 + vanilla JS. No build step: open `index.html` or run `python3 -m h
 - Colours/fonts: CSS variables at the top of `css/styles.css`.
 - Screenshots: project screenshots are stored in `assets/images/`, shown below the hero and on each project card.
 
-## Connect the contact form later
-`handleValidSubmission()` in `js/script.js` is the single hook. Replace it with a `fetch` POST to your chosen endpoint (form service, serverless function or email API), handle success/error states honestly, and add a privacy note.
+## Contact form
+The contact form uses Netlify Forms (`data-netlify="true"`). Deploy the static site to Netlify to enable submissions; submissions can then be managed in the site's Netlify dashboard.

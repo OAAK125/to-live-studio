@@ -111,8 +111,8 @@
         <h2 id="contact-title">Have an idea? Let’s make it <em>live.</em></h2>
         <p>Share your idea and let’s work out the best way to turn it into a polished, interactive experience.</p>
       </div>
-      <form id="contact-form" novalidate>
-        <p class="note note--status" role="note"><strong>Preview only.</strong> This form is not connected to a backend yet. Nothing you type is sent or stored.</p>
+      <form id="contact-form" name="to-live-studio-project-inquiry" method="POST" data-netlify="true">
+        <input type="hidden" name="form-name" value="to-live-studio-project-inquiry">
         <div class="field"><label for="name">Name</label><input id="name" name="name" autocomplete="name" required><p class="error" id="name-error" aria-live="polite"></p></div>
         <div class="field"><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required><p class="error" id="email-error" aria-live="polite"></p></div>
         <div class="field"><label for="projectType">Project type</label>
@@ -123,9 +123,17 @@
           <select id="deliverable" name="deliverable" required>
             <option value="">Choose one</option><option>UI/UX design</option><option>Interactive prototype</option><option>Coded front-end demo</option><option>Not sure yet</option>
           </select><p class="error" id="deliverable-error" aria-live="polite"></p></div>
-        <div class="field field--wide"><label for="description">Project description</label><textarea id="description" name="description" rows="5" required minlength="20"></textarea><p class="error" id="description-error" aria-live="polite"></p></div>
-        <button class="btn" type="submit">Check my details</button>
-        <p class="form-status" id="form-status" role="status"></p>
+        <div class="field field--wide"><label for="description">Project Description</label><textarea id="description" name="description" rows="5" required minlength="20"></textarea><p class="error" id="description-error" aria-live="polite"></p></div>
+        <div class="field"><label for="budget">Estimated budget (optional)</label>
+          <select id="budget" name="budget">
+            <option value="">Choose one</option><option>Under GH₵500</option><option>GH₵500–1,500</option><option>GH₵1,500–3,000</option><option>Above GH₵3,000</option><option>Not sure yet</option>
+          </select><p class="error" id="budget-error" aria-live="polite"></p></div>
+        <div class="field"><label for="timeline">When do you need it?</label>
+          <select id="timeline" name="timeline" required>
+            <option value="">Choose one</option><option>Within one week</option><option>Within 2–4 weeks</option><option>Flexible</option>
+          </select><p class="error" id="timeline-error" aria-live="polite"></p></div>
+        <div class="field field--wide"><label for="referenceLink">Reference link</label><input id="referenceLink" name="referenceLink" type="url" placeholder="https://"><p class="error" id="referenceLink-error" aria-live="polite"></p></div>
+        <button class="btn" type="submit">Submit</button>
       </form>
     </section>
   </main>

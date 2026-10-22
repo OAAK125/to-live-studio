@@ -94,25 +94,20 @@
     targets.forEach(t => { t.classList.add('reveal'); io.observe(t); });
   }
 
-  /* ===== Contact form (front-end only) ===== */
+  /* ===== Contact form validation ===== */
   const RULES = {
     name: v => v.trim() ? '' : 'Please enter your name.',
     email: v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()) ? '' : 'Please enter a valid email address.',
     projectType: v => v ? '' : 'Please choose a project type.',
     deliverable: v => v ? '' : 'Please choose a preferred deliverable.',
-    description: v => v.trim().length >= 20 ? '' : 'Please describe your idea in at least 20 characters.'
+    description: v => v.trim().length >= 20 ? '' : 'Please describe your idea in at least 20 characters.',
+    timeline: v => v ? '' : 'Please choose a timeline.',
+    referenceLink: v => !v.trim() || /^https?:\/\/\S+$/i.test(v.trim()) ? '' : 'Please enter a valid link starting with http:// or https://.'
   };
-
-  /* FUTURE: replace this with a real submission (e.g. fetch to your form endpoint).
-     Until then nothing is transmitted or stored. */
-  function handleValidSubmission(/* data */) {
-    return 'Your details pass validation. This form is not connected yet, so nothing was sent or saved.';
-  }
 
   function initForm() {
     const form = document.getElementById('contact-form');
-    const status = document.getElementById('form-status');
-    if (!form || !status) return;
+    if (!form) return;
 
     const check = field => {
       const msg = RULES[field.name](field.value);
@@ -125,14 +120,6 @@
     const fields = Object.keys(RULES).map(n => form.elements[n]).filter(Boolean);
     fields.forEach(f => f.addEventListener('blur', () => check(f)));
     fields.forEach(f => f.addEventListener('input', () => { if (f.getAttribute('aria-invalid') === 'true') check(f); }));
-
-    form.addEventListener('submit', e => {
-      e.preventDefault();
-      status.textContent = '';
-      const invalid = fields.filter(f => !check(f));
-      if (invalid.length) { invalid[0].focus(); status.textContent = `Please fix ${invalid.length} field${invalid.length > 1 ? 's' : ''} above.`; return; }
-      status.textContent = handleValidSubmission(Object.fromEntries(new FormData(form)));
-    });
   }
 
   const year = document.getElementById('year');

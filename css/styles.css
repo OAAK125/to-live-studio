@@ -119,13 +119,11 @@ section, .footer { padding: clamp(4rem, 9vw, 8rem) var(--pad); }
 .contact { display: grid; grid-template-columns: 1fr 1.1fr; gap: clamp(2rem, 5vw, 4rem); background: var(--coral-text); color: var(--ivory); }
 .contact em { color: var(--butter); }
 form { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; background: var(--ivory); color: var(--charcoal); padding: clamp(1.25rem, 3vw, 2rem); border-radius: var(--radius); align-content: start; }
-form .note--status { grid-column: 1 / -1; background: var(--peach); padding: .6rem .9rem; border-radius: 10px; margin: 0; color: var(--charcoal); }
-.field--wide, form .btn, .form-status { grid-column: 1 / -1; }
+.field--wide, form .btn { grid-column: 1 / -1; }
 label { display: block; font-size: .85rem; font-weight: 600; margin-bottom: .3rem; }
 input, select, textarea { width: 100%; font: inherit; padding: .7rem .85rem; border: 1.5px solid rgba(32,32,29,.35); border-radius: 10px; background: #fff; color: var(--charcoal); min-height: 48px; }
 input[aria-invalid="true"], select[aria-invalid="true"], textarea[aria-invalid="true"] { border-color: #9b1c1c; }
 .error { color: #9b1c1c; font-size: .85rem; min-height: 1.2em; margin: .25rem 0 0; }
-.form-status { margin: 0; font-weight: 500; }
 
 /* ===== Footer ===== */
 .footer { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 2rem; border-top: var(--line); }
