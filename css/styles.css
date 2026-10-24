@@ -41,6 +41,9 @@ section, .footer { padding: clamp(4rem, 9vw, 8rem) var(--pad); }
 .wordmark { display: inline-flex; align-items: center; gap: .55rem; text-decoration: none; font: 600 1.3rem var(--serif); margin: 0; }
 .nav__menu { display: flex; align-items: center; gap: 1.75rem; }
 .nav__menu a:not(.btn) { text-decoration: none; font-size: .95rem; font-weight: 500; } .nav__menu a:not(.btn):hover { color: var(--coral-text); }
+.nav__menu .nav__whatsapp { display: inline-flex; align-items: center; gap: .4rem; color: #168C4A; }
+.nav__menu a.nav__whatsapp:hover { color: #106D39; }
+.nav__whatsapp svg { width: 1.2rem; height: 1.2rem; fill: currentColor; }
 .nav__toggle { display: none; width: 48px; height: 48px; border: 0; background: none; cursor: pointer; position: relative; }
 .nav__toggle span { position: absolute; left: 12px; right: 12px; height: 2px; background: var(--charcoal); transition: transform .25s; }
 .nav__toggle span:first-child { top: 19px; } .nav__toggle span:last-child { top: 27px; }
@@ -133,11 +136,6 @@ input[aria-invalid="true"], select[aria-invalid="true"], textarea[aria-invalid="
 .footer .btn { color: var(--ivory); } .footer .btn:hover { text-decoration: none; }
 .copy { grid-column: 1 / -1; font-size: .85rem; color: var(--grey); margin: 0; }
 
-/* ===== Floating WhatsApp contact ===== */
-.whatsapp-float { position: fixed; right: max(1.25rem, env(safe-area-inset-right)); bottom: max(1.25rem, env(safe-area-inset-bottom)); z-index: 60; display: inline-flex; align-items: center; gap: .6rem; padding: .8rem 1.1rem; border-radius: 999px; background: #168C4A; color: #fff; text-decoration: none; font-size: .95rem; font-weight: 600; box-shadow: 0 4px 16px rgba(0,0,0,.22); transition: background .2s, transform .2s; }
-.whatsapp-float:hover { background: #106D39; transform: translateY(-2px); }
-.whatsapp-float svg { width: 1.4rem; height: 1.4rem; fill: currentColor; }
-
 /* ===== Reveal ===== */
 .js .reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s, transform .7s; }
 .js .reveal.is-in { opacity: 1; transform: none; }
@@ -150,14 +148,15 @@ input[aria-invalid="true"], select[aria-invalid="true"], textarea[aria-invalid="
   .process ol { grid-template-columns: 1fr 1fr; } .process li:nth-child(even) { margin-top: 0; }
   .footer { grid-template-columns: 1fr 1fr; }
 }
-@media (max-width: 720px) {
+@media (max-width: 840px) {
   .nav__toggle { display: block; }
   .nav__menu { display: none; position: absolute; top: 100%; left: 0; right: 0; flex-direction: column; align-items: stretch; gap: 0; padding: .5rem var(--pad) 1.25rem; background: var(--ivory); border-bottom: var(--line); }
   .nav__menu.is-open { display: flex; }
   .nav__menu a:not(.btn) { padding: .9rem 0; border-bottom: var(--line); }
   .nav__menu .btn { margin-top: .9rem; }
+}
+@media (max-width: 720px) {
   form { grid-template-columns: 1fr; }
-  .whatsapp-float { right: max(.75rem, env(safe-area-inset-right)); bottom: max(.75rem, env(safe-area-inset-bottom)); }
   .process ol { grid-template-columns: 1fr; } .footer { grid-template-columns: 1fr; }
 }
 @media (prefers-reduced-motion: reduce) {
